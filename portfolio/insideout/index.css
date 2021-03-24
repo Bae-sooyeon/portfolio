@@ -1,0 +1,869 @@
+/* 폰트적용 */
+@import url('https://fonts.googleapis.com/css2?family=Chewy&family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Righteous&display=swap');
+
+html {
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.font-1 {
+  font-family: 'Righteous', cursive;
+}
+
+.font-2 {
+  font-family: 'Chewy', cursive;
+}
+
+@font-face {
+  font-family: 'TmoneyRoundWindExtraBold';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/TmoneyRoundWindExtraBold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+          
+
+/* 노말라이즈 */
+body, ul, li, h1 {
+  margin:0;
+  padding:0;
+  list-style:none;
+}
+
+a {
+  color:inherit;
+  text-decoration:none;
+}
+
+label[for] {
+  cursor:pointer;
+  user-select:none;
+}
+
+/* 라이브러리 */
+.block {
+  display:block;
+}
+
+.inline-block {
+  display:inline-block;
+}
+
+.absolute-left {
+  position:absolute;
+  left:0;
+}
+
+.absolute-right {
+  position:absolute;
+  right:0;
+}
+
+.absolute-bottom {
+  position:absolute;
+  bottom:0;
+}
+
+.absolute-top {
+  position:absolute;
+  top:0;
+}
+
+.absolute-center {
+  position:absolute;
+  left:50%;
+  transform:translateX(-50%);
+}
+
+.absolute-middle {
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+}
+
+.absolute-middle.absolute-center {
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translateX(-50%) translateY(-50%);
+}
+
+.abs-full {
+  position: absolute;
+  top:0;
+  left:0;
+  width: 100%;
+  height: 100%;
+}
+
+.relative {
+  position:relative;
+}
+
+.cell {
+  float:left;
+  box-sizing:border-box;
+}
+
+.cell-center {
+  float:center;
+  box-sizing:border-box;
+}
+
+.cell-right {
+  float:right;
+  box-sizing:border-box;
+}
+
+.row::after {
+  content:"";
+  display:block;
+  clear:both;
+}
+
+.clear-both {
+  clear:both;
+}
+
+.img-box > img {
+  width:100%;
+  display:block;
+}
+
+.con {
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.margin-0-auto {
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.text-align-center {
+  text-align:center;
+}
+
+.text-align-right {
+  text-align:right;
+}
+
+.line-height-0 {
+  line-height:0;
+}
+
+.line-height-0 > * {
+  line-height:normal;
+}
+
+.width-30px {
+  width:30px;
+}
+
+.width-35px {
+  width:35px;
+}
+
+.width-40px {
+  width:35px;
+}
+
+.width-45px {
+  width:35px;
+}
+
+.width-50px {
+  width:50px;
+}
+
+.width-80px {
+  width:80px;
+}
+
+.width-100px {
+  width:100px;
+}
+
+.width-100p {
+  width:100%;
+}
+
+.width-60p {
+  width:60%;
+}
+
+.width-55p {
+  width:55%;
+}
+
+.width-50p {
+  width:50%;
+}
+
+.width-45p {
+  width:45%;
+}
+
+.width-40p {
+  width:40%;
+}
+
+.width-30p {
+  width:30%;
+}
+
+.width-35p {
+  width:35%;
+}
+
+.width-100p-except-30px {
+  width:calc(100% - 30px);
+}
+
+.width-100p-except-35px {
+  width:calc(100% - 35px);
+}
+
+.width-100p-except-40px {
+  width:calc(100% - 40px);
+}
+
+.width-100p-except-50px {
+  width:calc(100% - 50px);
+}
+
+.width-100p-except-80px {
+  width:calc(100% - 80px);
+}
+
+.width-100p-except-100px {
+  width:calc(100% - 100px);
+}
+
+.border-box {
+  box-sizing:border-box;
+}
+
+.font-size-dot-8rem {
+  font-size:.8rem;
+}
+
+.table-row {
+  display:table;
+}
+
+.table-row.row::after {
+  display:inline;
+  clear:non;
+}
+
+.table-row > .cell {
+  float:none;
+  display:table-cell;
+}
+*>.flex {
+    display: flex;
+}
+
+*>.flex-column-nowrap {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+*>.flex-grow-1 {
+    flex-grow: 1;
+}
+
+*>.flex-jc-end {
+    display: flex;
+    justify-content: flex-end;
+}
+
+*>.flex-ai-end {
+    display: flex;
+    align-items: flex-end;
+}
+
+*>.flex-jc-c {
+    display: flex;
+    justify-content: center;
+}
+
+*>.flex-ai-c {
+    display: flex;
+    align-items: center;
+}
+
+*>.flex-as-c {
+    align-self: center;
+}
+
+*>.flex-wrap {
+    flex-wrap: wrap;
+}
+
+*>.flex-wrap-no {
+  flex-wrap: nowrap;
+}
+*>.flex-row-nowrap {
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+*>.flex-ch-basis-0 {
+    display: flex;
+}
+
+.flex-ch-basis-0>* {
+    flex-basis: 0;
+}
+
+*>.flex-1-0-0 {
+    flex: 1 0 0;
+}
+
+*>.flex-sp-b{
+    justify-content: space-between;
+}
+
+*>.flex-sp-ar{
+    justify-content: space-around;
+}
+
+.h-100p {
+    height:100%;
+}
+
+.bd-red {
+    border:1px solid red;
+}
+/* 커스텀 */
+.con {
+  max-width:1140px;
+}
+body {
+  overflow:hidden !important;
+}
+
+.section {
+    position: relative;
+    height: 100vh;
+    z-index: 0;
+  }
+  
+.section .bg {
+    position: absolute;
+    top:0;
+    left: 0;
+    width:100%;
+    height: 100%;
+    z-index: -1;
+}
+
+/* 왼쪽 네비 시작 */
+#menu{
+  position:fixed;
+  flex-direction: column;
+  align-items: flex-start;
+  top:50%;
+  left:0;
+  z-index: 70;
+  padding: 0;
+  margin:0;
+  transform: translatey(-50%);
+  color:white;
+}
+
+#menu > li {
+  padding-top:5px;
+}
+
+#menu > li > div {
+  width: 25px;
+  height: 2px;
+  margin:0 10px 0 20px;
+  background-color: white;
+  opacity: 0;
+}
+#menu > li.active > div {
+  opacity: 1;
+}
+
+#menu > li.active > a {
+  font-weight: bold;
+}
+/* 왼쪽 네비 끝 */
+
+
+/* 탑바 시작 */
+.home .top-bar {
+    padding-top:40px;
+}
+
+.home .top-bar > ul > li {
+    padding:0 20px;
+}
+
+.home .top-bar > ul > li > a {
+    color:white;
+    font-weight: bold;
+    font-size:1.5rem;
+}
+
+/* 탑바 끝 */
+
+
+/* 인사이드 아웃 로고 시작 */
+.home .bn-logo {
+    position: absolute;
+    top:50%;
+    left:10%;
+    transform: translate(0, -45%);
+}
+
+.home .bn-logo > img {
+  opacity: 0;
+}
+
+.home .bn-logo > img:last-child {
+    margin-left:15%;
+}
+
+
+.active.fadeInLeft {
+    animation-name: fadeInLeft;
+    animation-duration: 1500ms;
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes fadeInLeft {
+    from {
+      opacity: 0;
+      transform: translate(-100%, 0);
+      transform: translate(-100%, 0);
+    }
+  
+    to {
+      opacity: 1;
+      transform: translate(0, 0);
+      transform: translate(0, 0);
+    }
+  }
+  
+
+/* 인사이드 아웃 로고 끝 */
+
+/* 스토리 시작 */
+
+.story .bg .bg-img {
+  width: 100%;
+  height: 100%;
+  background-image: url(https://bae-sooyeon.github.io/img1/pf/insideout/story-img.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.story .story-h1 {
+  color:white;
+  font-weight: bold;
+  font-size:2rem;
+  text-align: center;
+  padding-top:40px;
+}
+
+.story .story-h2 {
+  font-size:2.1rem;
+  color:#E56786;
+  text-align: center;
+  padding-top:70px;
+  font-weight: bold;
+  opacity: 0;
+}
+
+.story .story-ct-1 {
+  color:white;
+  text-align: center;
+  padding-top:30px;
+  line-height: 2;
+  opacity: 0;
+}
+
+
+.story .story-dots {
+  padding-top:10px;
+  opacity: 0;
+}
+
+.story .story-dots > div {
+  margin-left:auto;
+  margin-right:auto;
+  width:4px;
+  height: 4px;
+  background-color:white;
+  opacity: 0.5;
+  padding:10 0px;
+  border-radius: 100%;
+  margin-top:5px;
+}
+
+.story .story-ct-2 {
+  font-size:1.2rem;
+  font-weight: 400;
+  color:white;
+  text-align: center;
+  padding-top:15px;
+  opacity: 0;
+}
+
+.mousemove-effect-1-el {
+  position:absolute;
+}
+
+.mousemove-effect-1-el > img {
+  width:100%;
+  display:block;
+}
+
+.mousemove-effect-1-el-1 {
+  left:0;
+  top:50px;
+  width:500px;
+  
+}
+
+.mousemove-effect-1-el-2 {
+  right:0;
+  top:0;
+  width:500px;
+}
+/* 스토리 끝 */
+
+/* 캐릭터 시작 */
+.characters .bg .bg-img {
+  width: 100%;
+  height: 100%;
+  background-image: url(https://bae-sooyeon.github.io/img1/pf/insideout/characters-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+
+.active.fadeInUp {
+  animation-name: fadeInUp;
+  animation-duration: 1500ms;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate(0, 100%);
+    transform: translate(0, 100%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+}
+
+.characters > .characters-h1 {
+  color:white;
+  font-weight: bold;
+  font-size:2rem;
+  text-align: center;
+  padding-top:40px;
+}
+
+.characters > .bb-bg > img {
+  position: absolute;
+  top:25%;
+  width:98%;
+  opacity: 0.5;
+}
+
+/* 캐릭터 슬라이더 시작 */
+.con-1 {
+  margin-left:220px;
+  margin-right:220px;
+  min-width:800px;
+  height: 550px;
+}
+
+.box-1 {
+  padding-top:60px;
+}
+
+.slider-1 .item > a{
+  display: block
+}
+
+.slider-1 {
+  margin-right:-300px;
+  height: 840px;
+  position: relative;
+}
+
+.slider-1 > .nav {
+  position:absolute;
+  bottom: 2%;
+  margin-bottom: 50px;
+  left:0;
+  width:125px;
+  height:50px;
+  z-index: 300;
+  display:flex;
+  justify-content: space-between;
+}
+
+.slider-1 > .nav > .owl-prev {
+  width:60px;
+  height:100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right:20px;
+  cursor: pointer;
+  border:2px solid white;
+}
+
+.slider-1 > .nav > .owl-next {
+  width:60px;
+  height:100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border:2px solid white;
+}
+
+.slider-1 > .nav > .owl-prev > i, .slider-1 > .nav > .owl-next > i {
+  font-size:2rem;
+}
+.characters .item {
+  margin-right: 100px;
+}
+.characters .item > a > .img-box{
+  position: relative;
+  overflow: hidden;
+}
+
+.characters .item > a > .img-box > img {
+  width: 450px;
+  position: relative;
+}
+
+.characters .item > a > .img-box > .text {
+  width: 100%;
+  height:160px;
+  position: absolute;
+  background-color:rgba(0,0,0,0.8);
+  opacity: 0;
+  transition:opacity .3s, bottom .5s;
+  font-family: 'TmoneyRoundWindExtraBold';
+  bottom: -30%;
+}
+
+.characters .item:hover > a > .img-box > .text {
+  opacity: 1;
+  bottom: 0;
+}
+
+.characters .item > a > .img-box > .text >.text-box {
+  padding-left:20px;
+}
+
+.characters .item > a > .img-box > .text >.text-box > .text-name {
+  font-size:1.8rem;
+  color:white;
+  font-weight: bold;
+  margin-top:20px;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+}
+
+.characters .item > a > .img-box > .text >.text-box > .ch-chat {
+  margin-bottom: 15px;
+  font-size:1.1rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.characters .item > a > .img-box > .text >.text-box > .ch-chat-2 {
+  color:white;
+  letter-spacing: 1px;
+}
+
+.characters .item1 > a > .img-box > .text >.text-box > .ch-chat {
+  color: gold;
+}
+
+.characters .item2 > a > .img-box > .text >.text-box > .ch-chat {
+  color: greenyellow;
+}
+
+.characters .item3 > a > .img-box > .text >.text-box > .ch-chat {
+  color:royalblue;
+}
+
+.characters .item4 > a > .img-box > .text >.text-box > .ch-chat {
+  color: red;
+}
+
+.characters .item5 > a > .img-box > .text >.text-box > .ch-chat {
+  color: plum;
+}
+
+.owl-carousel .owl-item  {
+  height: 700px;
+}
+
+.box-1 .item .date{
+  font-weight: 500;
+  margin:7px 0;
+  font-size: 15px;
+  color: #666;
+  margin-top:20px;
+}
+
+.box-1 .item .tit{
+  font-size: 21px;
+  font-weight: 500;
+  line-height: 1.2;
+  height: 2.4em;
+}
+
+.bd-1 {
+  font-size:1.3rem;
+  color:white;
+}
+
+/* 캐릭터 끝 */
+
+/* 트레일러 시작 */
+.trailer .bg .bg-img {
+  width: 100%;
+  height: 100%;
+  background-image: url(https://bae-sooyeon.github.io/img1/pf/insideout/trailer-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.trailer > .trailer-h1 {
+  color:white;
+  font-weight: bold;
+  font-size:2rem;
+  text-align: center;
+  padding-top:40px;
+}
+
+.youtube-vid {
+  position: relative;
+  top:11%;
+  border:1px solid;
+}
+.youtube-vid::before {
+  content:"";
+  display: block;
+  padding-top:56.75977653631284%;
+}
+.youtube-vid > iframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  transform: translate(-50%, -50%);
+}
+
+/* 트레일러 끝 */
+
+
+/* 갤러리 시작 */
+.gallery .bg .bg-img {
+  width: 100%;
+  height: 100%;
+  background-image: url(https://bae-sooyeon.github.io/img1/pf/insideout/photo-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+/* 갤러리 큰제목 */
+.gallery > .gallery-h1 {
+  color:white;
+  font-weight: bold;
+  font-size:2rem;
+  text-align: center;
+  padding-top:40px;
+}
+
+/* 갤러리 슬라이더 */
+.my-1 {
+    width:1300px;
+    margin:0 auto;
+    margin-top:70px;
+}
+
+
+.my-1 > .owl-carousel > .owl-stage-outer > .owl-stage > .owl-item > .item {
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position:center;
+    margin:163px 0 100px 0;
+}
+
+.my-1 > .owl-carousel > .owl-stage-outer > .owl-stage > .owl-item > .item::after {
+    content:"";
+    display:block;
+    padding-top:56.25%;
+}
+
+.my-1 > .owl-carousel > .owl-stage-outer > .owl-stage > .owl-item {
+    transition:transform 0.3s;
+}
+
+.my-1 > .owl-carousel > .owl-stage-outer > .owl-stage > .owl-item.center {
+    transform:scale(1.5);
+    z-index:10;
+}
+
+.my-1 > .owl-carousel > .owl-nav > .owl-prev {
+  background-color:transparent;
+  margin-right:20px;
+}
+
+.my-1 > .owl-carousel > .owl-nav > .owl-next {
+  background-color:transparent;
+  margin-left:20px;
+}
+
+
+/* 갤러리 탑 버튼 */
+.gallery .top-bt-wrapper {
+  color:white;
+  font-weight: bold;
+  position: relative;
+  bottom:2%;
+  left:94%;
+  width:100px;
+  height:100px;
+  transition:.3s;
+}
+
+.gallery .top-bt-wrapper:hover {
+  bottom:7%;
+  transition:.3s;
+}
+
+.gallery .top-bt-wrapper > .top-bt > img {
+  width:100px;
+  height:100px;
+  position: absolute;
+}
+
+
+
+/* 갤러리 끝 */
