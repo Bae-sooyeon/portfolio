@@ -70,7 +70,8 @@ function Slider1__init() {
   $('.slider-1 .owl-carousel').owlCarousel({
     loop:true,
     margin:20,
-    nav:false,
+    nav:true,
+    navText: ['<i class="fas fa-chevron-left bd-1"></i>', '<i class="fas fa-chevron-right bd-1"></i>'],
     dots:false,
     center:true,
     autoPlay : true,
